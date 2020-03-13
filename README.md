@@ -1,5 +1,5 @@
 # infographicShow
- Beautiful creatiion of an infographics show using jQuery and GSAP animation.
+ Beautiful creation of an infographics show using jQuery and GSAP animation.
  
 # Technologies:
 - HTML & CSS
