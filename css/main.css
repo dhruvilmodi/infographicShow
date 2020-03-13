@@ -1,0 +1,769 @@
+/* GENERAL STYLES - NOT TO BE EDITED */
+/* reset */
+@font-face{
+    font-family: 'Exo';
+    src: url(fonts/Exo-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Exo', sans-serif;
+}
+
+html, body {
+    /* stop page from scrolling */
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/body_bg.jpg);
+    background-size: contain;
+}
+
+div, main, section, img, h1, h2 {
+    position: absolute;
+}
+
+#loading, main {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#loading img {
+    width: 80px;
+    height: auto;
+}
+
+main {
+    width: 960px;
+    height: 600px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: inset 0px 0px 15px 0px #000000;
+    box-shadow: 0px 0px 15px 0px #000000;
+    border-radius: 40px;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*
+section h1 {
+    width: 600px;
+    color: #000;
+    letter-spacing: 4px;
+    font-size: 30px;
+    top: 15%;
+    left: 20%;
+}
+*/
+
+section img {
+    position: absolute;
+}
+
+.next:hover, .prev:hover {
+    cursor: pointer;
+}
+
+#playPause {
+    bottom: 27px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.play {
+    width: 12px;
+    height: 16px;
+    border-top: 8px solid transparent;
+    border-left: 12px solid #000;
+    border-bottom: 8px solid transparent;
+}
+
+.pause {
+    width: 12px;
+    height: 16px;
+    border-right: 4px solid #000;
+    border-left: 4px solid #000;
+}
+
+/* GENERAL STYLES - MAY BE EDITED */
+.next {
+    bottom: 270px;
+    padding: 5px;
+    color: #FFF;
+    background-image: url(../img/right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 5%;
+    height: 15%;
+    transition: all 0.01s;
+    right: 20px;
+    
+}
+
+.prev {
+    bottom: 270px;
+    padding: 5px;
+    color: #FFF;
+    background-image: url(../img/left.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 5%;
+    height: 15%;
+    transition: all 0.01s;
+    left: 20px;
+    
+}
+
+.next:hover {
+    background-image: url(../img/rightHover.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 5%;
+    height: 15%;
+    transition: all 0.01s;
+}
+
+.prev:hover {
+    background-image: url(../img/leftHover.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 5%;
+    height: 15%;
+    transition: all 0.01s;
+}
+
+
+/* shared screen styles */
+/* for demo only */
+
+section h1{
+    width: 600px;
+    color: #000;
+    letter-spacing: 4px;
+    top: 10%;
+    left: 10%;
+}
+
+#screen3 h1, #screen4 h1, #screen5 h1, #screen6 h1, #screen7 h1{
+    width: 700px;
+    color: #000;
+    letter-spacing: 2px;
+    top: 10%;
+    left: 14%;
+    font-size: 20px;
+}
+
+#screen1_h1_1{
+    width: 600px;
+    color: #000;
+    letter-spacing: 4px;
+    top: 20%;
+    left: 20%;
+}
+
+#screen1_h1_2{
+    width: 600px;
+    color: #000;
+    letter-spacing: 4px;
+    top: 40%;
+    left: 45%;
+}
+
+#screen1_h1_3{
+    width: 600px;
+    color: #000;
+    letter-spacing: 4px;
+    top: 60%;
+    left: 24%;
+}
+
+/* DEMO-SPECIFIC STYLES */
+section h1 {
+  color: #000;
+  font-size: 26px;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 3.5s steps(30, end);
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+#screen1_img_1 {
+    position: absolute;
+    top: 28%;
+    left: 25%;
+    transform: translate(-50,-50);
+}
+
+#screen1_img_2 {
+    position: absolute;
+    top: 68%;
+    left: 25%;
+    transform: translate(-50,-50);
+}
+
+#screenshot1{
+    background-image: url(../img/screenshot1.png);
+    background-size: cover;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 25%;
+    right: 1%;
+    z-index: 1000;
+    box-shadow: 0px 0px 5px 0px #000000;
+    opacity: 0;
+}
+
+#screenshot2{
+    background-image: url(../img/screenshot2.png);
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 20%;
+    left: 1%;
+    z-index: 0;
+    box-shadow: 0px 0px 5px 0px #000000;
+    opacity: 0;
+}
+
+#screen1_career{
+    position: absolute;
+    top: 28%;
+    left: 16%;
+    background-image: url(../img/career.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 200px;
+    opacity: 1;
+}
+
+#screen1_life{
+    position: absolute;
+    top: 28%;
+    right: 20%;
+    background-image: url(../img/life.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+}
+
+#customNav img{
+    width: 70px;
+}
+
+#customNav1{
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+}
+
+
+/* class can be appied to anything you want a pointer hover on */
+.eleHover:hover {
+    cursor: pointer;
+}
+
+/* screen 1 styles */
+#screen1 {
+    background: #FFFFFF;
+    background-image: url(../img/bg.png);
+}
+
+/* screen 2 styles */
+#screen2 {
+    background: #FFFFFF;
+    background-image: url(../img/bg.png);
+}
+
+#screen2 h1{
+    left: 25%;
+    top: 10%;
+}
+
+.page1, .page2, .page3, .page4, .page5, .page6, .page7, .page8{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s all;
+}
+
+.page1:hover, .page2:hover, .page3:hover, .page4:hover, .page5:hover, .page6:hover, .page7:hover, .page8:hover{
+    background: dodgerblue;
+    color: #FFF;
+    transition: 0.5s all;
+}
+
+#p1Hover, #p2Hover, #p3Hover, #p4Hover, #p5Hover, #p6Hover, #p7Hover, #p8Hover{
+    transition: 0.5s all;
+}
+
+#p1Hover:hover, #p2Hover:hover, #p3Hover:hover, #p4Hover:hover, #p5Hover:hover, #p6Hover:hover, #p7Hover:hover, #p8Hover:hover{
+    transition: 0.5s all;
+}
+
+.page1{
+    right: 40%;
+    bottom: 3.5%;
+}
+
+.page1:hover ~ #p1Hover{
+    background-image: url(../img/screenshot1.png);
+    background-size: cover;
+    width: 200px;
+    height: 100px;
+    box-shadow: 0px 0px 5px 0px #000000;
+    border-radius: 0;
+    display: flex;
+    right: 30%;
+    bottom: 10%;
+    transition: 0.5s all;
+}
+
+.page2{
+    right: 35%;
+    bottom: 3.5%;
+}
+
+.page2:hover ~ #p2Hover{
+    background-image: url(../img/screenshot2.png);
+    background-size: cover;
+    width: 200px;
+    height: 100px;
+    box-shadow: 0px 0px 5px 0px #000000;
+    border-radius: 0;
+    display: flex;
+    right: 25%;
+    bottom: 10%;
+    transition: 0.5s all;
+}
+
+.page3{
+    right: 30%;
+    bottom: 3.5%;
+}
+
+.page3:hover ~ #p3Hover{
+    background-image: url(../img/screenshot3.png);
+    background-size: cover;
+    width: 200px;
+    height: 100px;
+    box-shadow: 0px 0px 5px 0px #000000;
+    border-radius: 0;
+    display: flex;
+    right: 20%;
+    bottom: 10%;
+    transition: 0.5s all;
+}
+
+.page4{
+    right: 25%;
+    bottom: 3.5%;
+}
+
+.page4:hover ~ #p4Hover{
+    background-image: url(../img/screenshot4.png);
+    background-size: cover;
+    width: 200px;
+    height: 100px;
+    box-shadow: 0px 0px 5px 0px #000000;
+    border-radius: 0;
+    display: flex;
+    right: 15%;
+    bottom: 10%;
+    transition: 0.5s all;
+}
+
+.page5{
+    right: 20%;
+    bottom: 3.5%;
+}
+
+.page5:hover ~ #p5Hover{
+    background-image: url(../img/screenshot5.png);
+    background-size: cover;
+    width: 200px;
+    height: 100px;
+    box-shadow: 0px 0px 5px 0px #000000;
+    border-radius: 0;
+    display: flex;
+    right: 10%;
+    bottom: 10%;
+    transition: 0.5s all;
+}
+
+.page6{
+    right: 15%;
+    bottom: 3.5%;
+}
+
+.page6:hover ~ #p6Hover{
+    background-image: url(../img/screenshot6.png);
+    background-size: cover;
+    width: 200px;
+    height: 100px;
+    box-shadow: 0px 0px 5px 0px #000000;
+    border-radius: 0;
+    display: flex;
+    right: 5%;
+    bottom: 10%;
+    transition: 0.5s all;
+}
+
+.page7{
+    right: 10%;
+    bottom: 3.5%;
+}
+
+.page7:hover ~ #p7Hover{
+    background-image: url(../img/screenshot7.png);
+    background-size: cover;
+    width: 200px;
+    height: 100px;
+    box-shadow: 0px 0px 5px 0px #000000;
+    border-radius: 0;
+    display: flex;
+    right: 0%;
+    bottom: 10%;
+    transition: 0.5s all;
+}
+
+.page8{
+    right: 5%;
+    bottom: 3.5%;
+}
+
+.page8:hover ~ #p8Hover{
+    background-image: url(../img/screenshot8.png);
+    background-size: cover;
+    width: 200px;
+    height: 100px;
+    box-shadow: 0px 0px 5px 0px #000000;
+    border-radius: 0;
+    display: flex;
+    right: 0%;
+    bottom: 10%;
+    transition: 0.5s all;
+}
+
+#ele1 img{
+    top: 43%;
+    left: 50%;
+    z-index: 1000;
+    transform: translate(-50,-50);
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 15s linear infinite;
+}
+
+    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+section h2{
+    width: 600px;
+    color: #000;
+    letter-spacing: 4px;
+    font-size: 26px;
+    top: 40%;
+    left: 49%;
+}
+
+#screen2_expand{
+    position: absolute;
+    width: 350px;
+    top: 20%;
+    left: 11%;
+    opacity: 0;
+    z-index: 0;
+}
+
+#screen2_hand{
+    position: absolute;
+    width: 40px;
+    top: 44%;
+    right: 9%;
+    opacity: 0;
+}
+
+/* for demo only */
+#ele1 {
+    top: 30%;
+    left: 14%;
+}
+
+#ele1hover_1, #ele1hover_2, #ele1hover_3, #ele1hover_4, #ele1hover_5{
+    position: absolute;
+    bottom: -110%;
+    
+}
+
+#ele1hover_1 img{
+    width: 100px;
+}
+
+#ele1hover_2 img{
+    width: 80px;
+}
+
+#ele1hover_3 img{
+    width: 120px;
+}
+
+#ele1hover_4{
+    bottom: 60;
+}
+
+#ele1hover_4 img{
+    width: 70px;
+}
+
+#ele1hover_5 img{
+    width: 100px;
+}
+
+#ele4 {
+    bottom: 150px;
+    right: 200px;
+    color: #FFF;
+    text-align: center;
+    line-height: 100px;
+}
+
+/* ele4 hover */
+#ele4:hover + #ele4hover {
+    opacity: 1;
+    transform: scale(1.5) translate(17px, -17px);
+}
+
+#ele4hover {
+    background: #FFF;
+    bottom: 250px;
+    right: 100px;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+
+/* screen 3 styles */
+#screen3 {
+    background: #FFFFFF;
+    background-image: url(../img/bg.png);
+}
+
+
+.subHeading{
+    top: 60%;
+    left: 42%;
+}
+
+.desc{
+    width: 800px;
+    font-size: 20px;
+    position: absolute;
+    bottom: 12%;
+    left: 10%;
+    line-height: 40px;
+    letter-spacing: 3px;
+    text-align: justify;
+    
+}
+
+#ele6 {
+    top: 25%;
+    left: 34%;
+}
+
+#ele6 img{
+    width: 300px;
+    z-index: 1000;
+}
+
+#change_scream{
+    position: absolute;
+    width: 200px;
+    top: 20%;
+    left: 35%;
+    opacity: 0;
+    z-index: 0;
+}
+
+#change_peace{
+    position: absolute;
+    width: 200px;
+    top: 20%;
+    right: 35%;
+    opacity: 0;
+    z-index: 0;
+}
+
+/* screen 4 styles */
+#screen4 {
+    background: #FFFFFF;
+    background-image: url(../img/bg.png);
+}
+
+#ele7 {
+    top: 27%;
+    left: 41%;
+    z-index: 1000;
+}
+
+#ele7 img{
+    width: 170px;
+}
+
+#addnew_puzzle1{
+    position: absolute;
+    width: 100px;
+    top: 55%;
+    left: -25%;
+    opacity: 0;
+    z-index: 0;
+}
+
+#addnew_puzzle2{
+    position: absolute;
+    width: 100px;
+    top: 55%;
+    right: -25%;
+    opacity: 0;
+    z-index: 0;
+}
+
+
+/* screen 5 styles */
+#screen5 {
+    background: #FFFFFF;
+    background-image: url(../img/bg.png);
+}
+
+#ele8 {
+    top: 30%;
+    left: 35%;
+}
+
+#ele8 img{
+    width: 300px;
+}
+
+#learning_comp{
+    position: absolute;
+    width: 200px;
+    top: 30%;
+    right: 50%;
+    opacity: 0;
+    z-index: 0;
+}
+
+/* screen 6 styles */
+#screen6 {
+    background: #FFFFFF;
+    background-image: url(../img/bg.png);
+}
+
+#screen6_image {
+    top: 25%;
+    left: 42%;
+}
+
+#screen6_image img{
+    width: 150px;
+}
+
+#screen6 .subHeading{
+    top: 60%;
+    left: 40%;
+}
+
+#get_success1{
+    position: absolute;
+    width: 200px;
+    top: 25%;
+    left: -25%;
+    opacity: 0;
+    z-index: 0;
+}
+
+#get_success2{
+    position: absolute;
+    width: 200px;
+    top: 25%;
+    right: -25%;
+    opacity: 0;
+    z-index: 0;
+}
+
+/* screen 7 styles */
+#screen7 {
+    background: #FFFFFF;
+    background-image: url(../img/bg.png);
+}
+
+#screen7_image {
+    top: 25%;
+    left: 42%;
+}
+
+#screen7_image img{
+    width: 150px;
+    z-index: 1000;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 15s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+#screen7 .subHeading{
+    top: 60%;
+    left: 45%;
+}
+
+/* screen 8 styles */
+#screen8 {
+    background: #FFFFFF;
+    background-image: url(../img/bg.png);
+    text-align: center;
+}
+
+#screen8_h3{
+    top: 20%;
+    left: 10%;
+    font-size: 20px;
+    letter-spacing: 3px;
+    line-height: 50px;
+    
+}
+
+#screen8 p{
+    text-align: center;
+}
